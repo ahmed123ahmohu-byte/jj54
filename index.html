@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexa — المستقبل</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <main id="app">
+      <section id="splash" class="screen active">
+        <div class="glass hero">
+          <h1 class="logo">Nexa</h1>
+          <p id="typewriter" class="typewriter"></p>
+          <p class="sub">مصنوع بفخر من طلاب عرب.</p>
+          <button id="startBtn" class="primary">ابدأ</button>
+        </div>
+      </section>
+
+      <section id="login" class="screen">
+        <div class="glass card">
+          <h2>تسجيل الدخول</h2>
+          <label for="username">اكتب اسمك</label>
+          <input id="username" type="text" placeholder="مثال: أحمد" maxlength="24" />
+          <button id="loginBtn" class="primary">دخول</button>
+        </div>
+      </section>
+
+      <section id="chat" class="screen">
+        <div class="chat-layout" id="chatLayout">
+          <aside id="codePanel" class="code-panel hidden">
+            <header>
+              <div>
+                <small>لغة الكود</small>
+                <h3 id="codeLanguage">JavaScript</h3>
+              </div>
+              <button id="closeCode" class="ghost">رجوع للشات</button>
+            </header>
+            <textarea id="codeEditor" spellcheck="false"></textarea>
+            <div class="code-actions">
+              <button id="copyCode" class="ghost">Copy</button>
+              <button id="downloadCode" class="ghost">Download</button>
+              <button id="runCode" class="primary">Run</button>
+            </div>
+            <pre id="runOutput"></pre>
+          </aside>
+
+          <section class="chat-panel glass">
+            <header>
+              <h2>Nexa</h2>
+              <p id="welcome"></p>
+            </header>
+
+            <div id="messages" class="messages"></div>
+            <div id="typing" class="typing hidden">
+              <span></span><span></span><span></span>
+            </div>
+
+            <form id="chatForm" class="input-row">
+              <input id="prompt" type="text" placeholder="اكتب رسالتك..." autocomplete="off" />
+              <button class="primary" type="submit">إرسال</button>
+            </form>
+
+            <div class="quick-actions">
+              <button data-action="project">ابدأ مشروع</button>
+              <button data-action="bug">حل Bug</button>
+              <button data-action="apk">Workflow APK</button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
